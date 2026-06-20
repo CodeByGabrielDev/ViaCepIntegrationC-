@@ -1,3 +1,3 @@
 namespace CepIntegration.Dto.Response;
 
-public record PessoaDTO(string Nome,DateTime Aniversario,EnderecoDto EnderecoDto);
+public record PessoaDTO(string Nome,DateTime Aniversario,int Age,EnderecoDto EnderecoDto);
