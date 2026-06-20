@@ -1,0 +1,16 @@
+namespace CepIntegration.Entities;
+
+
+public class CepEntity
+{
+
+    public int Id { get; set; }
+    public string? Cep { get; set; }
+    public string? Logradouro { get; set; }
+    public string? Complemento { get; set; }
+    public string? Bairro { get; set; }
+
+    public int PessoaId{get;set;}
+    public Pessoa Pessoa{get;set;}= null!;
+
+}
