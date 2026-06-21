@@ -10,18 +10,38 @@ public class PessoaService : IPessoaService
     private readonly ICepService cepService;
     private readonly IPessoaRepository pessoaRepository;
 
-    public PessoaService(ICepService cepService,IPessoaRepository pessoaRepository)
+    public PessoaService(ICepService cepService, IPessoaRepository pessoaRepository)
     {
         this.cepService = cepService;
         this.pessoaRepository = pessoaRepository;
     }
     /*
-    Task<Pessoa> SaveAsync(Pessoa pessoa);
 
-    Task<Pessoa?> FindByIdAsync(int id);
-
+    Task<PessoaDTO?> FindByIdAsync(int id);
     Task DeleteAsyncById(int id);
     */
+    public async Task DeleteAsyncById(int id)
+    {
+        var pessoa = await this.pessoaRepository.FindByIdAsync(id);
+
+        if (pessoa == null)
+        {
+            throw new Exception("Pessoa nao encontrada");
+        }
+        await this.pessoaRepository.DeleteAsyncById(id);
+    }
+
+
+    public async Task<PessoaDTO> FindByIdAsync(int id)
+    {
+        var pessoa = await this.pessoaRepository.FindByIdAsync(id);
+
+        if (pessoa == null)
+        {
+            throw new Exception("objeto pessoa nao enocntrado via banco");
+        }
+        return MontaDto(pessoa);
+    }
 
     public async Task<PessoaDTO> SaveAsync(PessoaDTORequest pessoa)
     {
@@ -37,8 +57,8 @@ public class PessoaService : IPessoaService
             Name = pessoa.Nome,
             CepEntity = cepEntity
         };
-    var pessoaPersistida = await this.pessoaRepository.SaveAsync(PessoaEntity);
-    return MontaDto(pessoaPersistida);
+        var pessoaPersistida = await this.pessoaRepository.SaveAsync(PessoaEntity);
+        return MontaDto(pessoaPersistida);
     }
     /*string Nome,DateTime Aniversario,int Age,EnderecoDto EnderecoDto
 

@@ -6,9 +6,9 @@ namespace CepIntegration.Service;
 
 public class CepService : ICepService
 {
-    private readonly ViaCepClient viaCepClient;
+    private readonly IViaCepClient viaCepClient;
 
-    public CepService(ViaCepClient viaCepClient)
+    public CepService(IViaCepClient viaCepClient)
     {
         this.viaCepClient = viaCepClient;
     }

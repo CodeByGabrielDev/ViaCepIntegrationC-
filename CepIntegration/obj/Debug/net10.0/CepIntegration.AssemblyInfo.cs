@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CepIntegration")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e207fbe24ba7befb0816372c08ee3ff82b3fec2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8038d8ebc7303f29660454f8689fdb0c6dc7dc8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CepIntegration")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CepIntegration")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
