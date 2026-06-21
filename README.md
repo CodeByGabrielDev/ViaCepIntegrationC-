@@ -11,10 +11,15 @@ A API realiza cadastro de pessoas com preenchimento automático de endereço, at
 Construído como parte do meu processo de aprendizado em .NET, aplicando os mesmos princípios de Clean Code, separação de camadas e boas práticas que já uso no desenvolvimento Java/Spring.
 
 ✔️ Arquitetura em camadas (Controller → Service → Repository → Client)
+
 ✔️ Integração com API externa (ViaCEP)
+
 ✔️ Persistência relacional com Entity Framework Core
+
 ✔️ Relacionamento OneToMany / ManyToOne entre entidades
+
 ✔️ DTOs com `record` para imutabilidade
+
 ✔️ Configuração tipada via Options Pattern
 
 ---
